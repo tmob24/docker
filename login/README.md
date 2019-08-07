@@ -32,8 +32,6 @@ action "Docker Login" {
 }
 ```
 
-In addition, if you're logging into a registry that's not Docker Hub, you can add a secret at `DOCKER_REGISTRY_URL` to point to a different registry.
-
 ## License
 
 The Dockerfile and associated scripts and documentation in this project are released under the [MIT License](LICENSE.md).
