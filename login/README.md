@@ -20,7 +20,17 @@ action "Docker Login" {
 }
 ```
 
-In addition, if you're logging into a registry that's not Docker Hub, you can add a secret at `DOCKER_REGISTRY_URL` to point to a different registry.
+A docker registry can be configured in the environment variables:
+
+```
+action "Docker Login" {
+  uses = "actions/docker/login@master"
+  secrets = ["DOCKER_USERNAME", "DOCKER_PASSWORD"]
+  env = {
+    DOCKER_REGISTRY_URL = "docker.pkg.github.com"
+  }
+}
+```
 
 ## License
 
