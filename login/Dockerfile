@@ -10,4 +10,4 @@ LABEL "com.github.actions.name"="Docker Registry"
 LABEL "com.github.actions.description"="This is an Action to log into docker."
 COPY LICENSE README.md THIRD_PARTY_NOTICE.md /
 
-ENTRYPOINT echo "$DOCKER_PASSWORD" | docker login $DOCKER_REGISTRY_URL -u $DOCKER_USERNAME --password-stdin
+ENTRYPOINT echo "$DOCKER_PASSWORD" | docker login "$DOCKER_REGISTRY_URL" -u "$DOCKER_USERNAME" --password-stdin
